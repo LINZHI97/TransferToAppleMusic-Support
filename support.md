@@ -1,122 +1,38 @@
-# 技术支持 / Technical Support
+# 歌单搬家 / Playlist Porter
 
-**TransferToAppleMusic — 网易云歌单迁移到 Apple Music**
+多平台和文件导入说明适用于 1.1 及更新版本，具体可用功能以已安装版本为准。
+Multi-platform and file import instructions apply to version 1.1 or later. Available features depend on your installed version.
 
----
+支持 iOS 17 或更新版本，需要有效的 Apple Music 订阅。
+Requires iOS 17 or later and an active Apple Music subscription.
 
-## 应用简介 / About the App
+复制来源平台的公开歌单分享链接，粘贴到首页并导入，审核匹配结果后再转移。
+Paste a public playlist share link, review the matches, then import.
 
-TransferToAppleMusic 是一款帮助您将网易云音乐歌单迁移到 Apple Music 的工具。只需粘贴网易云音乐的分享链接，即可自动匹配并添加歌曲到您的 Apple Music 资料库。
+| 来源 / Source | 直接链接 / Direct links |
+|---|---|
+| 网易云 / NetEase | 歌单及单曲 / Playlists and songs |
+| QQ 音乐 / QQ Music | 公开歌单，完整性核对 / Public playlists with completeness checks |
+| 汽水音乐 / Qishui | 公开歌单，完整性核对 / Public playlists with completeness checks |
+| 酷狗 / Kugou | 公开 collection 标识可读取；部分 GCID 分享格式受限 / Public collection IDs; some GCID share formats are restricted |
+| 酷我 / Kuwo | 公开歌单，完整性核对 / Public playlists with completeness checks |
+| 咪咕 / Migu | 公开歌单接口，受可见性限制 / Public playlist endpoints depend on visibility |
 
-TransferToAppleMusic is a tool that helps you migrate your NetEase Cloud Music playlists to Apple Music. Simply paste a NetEase Cloud Music sharing link to automatically match and add songs to your Apple Music library.
+无法完整读取时，应用会显示已读取数量，您可取消、仅导入已读取曲目，或改用文件。公开链接的可用性不保证 Apple Music 有对应歌曲。
+When a playlist is incomplete, the app shows the readable count. Cancel, import only available songs or use a file. Source availability does not guarantee a match in your Apple Music storefront.
 
----
+文件格式为 UTF-8 或带 BOM 的 UTF-16 CSV/TSV。必填列：`歌名`/`title`、`歌手`/`artist`；可选列：`专辑`/`album`。导入前预览并检查无效行。
+Use UTF-8 or BOM-marked UTF-16 CSV/TSV. Required headers: `title`, `artist`; optional: `album`. Chinese equivalents are accepted. Review invalid rows before importing.
 
-## 使用指南 / How to Use
+```csv
+title,artist,album
+晴天,周杰伦,叶惠美
+```
 
-### 第 1 步：获取分享链接
+免费额度为 30 首成功转移。100 首、500 首额度包可重复购买，Pro 为永久无限制。重复交易通知不会重复增加额度；已拥有的 Pro 无需重新购买。消耗型额度保存在当前设备，不能通过“恢复购买”恢复已消耗交易。
+Includes 30 free successful transfers. Credit packs add 100 or 500 transfers; Pro is a one-time unlimited purchase. Duplicate transaction notifications do not duplicate credits. Existing Pro owners do not need to buy again. Consumable balances are stored on the current device and are not restored by Restore Purchases after transactions have been consumed.
 
-1. 打开网易云音乐 App
-2. 进入想要迁移的歌单
-3. 点击分享按钮，复制链接
+反馈 / Feedback: [GitHub Issues](https://github.com/LINZHI97/TransferToAppleMusic-Support/issues)
 
-### Step 1: Get the Sharing Link
-
-1. Open the NetEase Cloud Music app
-2. Go to the playlist you want to migrate
-3. Tap the share button and copy the link
-
-### 第 2 步：粘贴链接
-
-1. 打开 TransferToAppleMusic
-2. 粘贴分享链接（支持短链接 `163cn.tv` 和完整链接）
-3. App 会自动解析歌单
-
-### Step 2: Paste the Link
-
-1. Open TransferToAppleMusic
-2. Paste the sharing link (supports short links `163cn.tv` and full links)
-3. The App will automatically parse the playlist
-
-### 第 3 步：开始迁移
-
-1. 确认歌单内容
-2. 授权 Apple Music 访问权限（首次使用时）
-3. 点击开始迁移
-4. 等待迁移完成
-
-### Step 3: Start Migration
-
-1. Confirm the playlist content
-2. Authorize Apple Music access (first time only)
-3. Tap to start migration
-4. Wait for the migration to complete
-
----
-
-## 常见问题 / FAQ
-
-### Q: 为什么有些歌曲匹配不上？
-
-A: 由于网易云音乐和 Apple Music 的曲库不完全相同，部分歌曲（尤其是独家版权歌曲）可能无法在 Apple Music 中找到匹配。此外，中英文翻译差异、歌曲版本差异也可能导致匹配失败。
-
-### Q: Why can't some songs be matched?
-
-A: Since the music libraries of NetEase Cloud Music and Apple Music are not identical, some songs (especially those with exclusive rights) may not be found in Apple Music. Additionally, differences in translations and song versions may also cause matching failures.
-
-### Q: 需要 Apple Music 订阅吗？
-
-A: 是的，您需要有效的 Apple Music 订阅才能将歌曲添加到资料库。
-
-### Q: Do I need an Apple Music subscription?
-
-A: Yes, you need an active Apple Music subscription to add songs to your library.
-
-### Q: 迁移后歌曲在哪里？
-
-A: 迁移的歌曲会添加到您的 Apple Music 资料库中。您可以在"资料库"→"最近添加"中找到它们。
-
-### Q: Where are the songs after migration?
-
-A: The migrated songs are added to your Apple Music library. You can find them in "Library" → "Recently Added".
-
-### Q: App 会上传我的数据吗？
-
-A: 不会。所有数据处理都在您的设备本地完成，不会上传到任何服务器。详情请查看我们的[隐私政策](privacy-policy.md)。
-
-### Q: Does the App upload my data?
-
-A: No. All data processing is done locally on your device and is not uploaded to any server. For details, please see our [Privacy Policy](privacy-policy.md).
-
----
-
-## 系统要求 / System Requirements
-
-- iOS 16.0 或更高版本 / iOS 16.0 or later
-- 有效的 Apple Music 订阅 / Active Apple Music subscription
-
----
-
-## 反馈与支持 / Feedback and Support
-
-如果您遇到任何问题或有任何建议，请通过以下方式联系我们：
-
-If you encounter any issues or have suggestions, please contact us through:
-
-- **提交 Issue / Submit an Issue**：[GitHub Issues](https://github.com/LINZHI97/TransferToAppleMusic-Support/issues)
-
-我们会尽快回复您的反馈。
-
-We will respond to your feedback as soon as possible.
-
----
-
-## 免责声明 / Disclaimer
-
-- TransferToAppleMusic 是独立开发的工具，与网易云音乐和 Apple Music 没有任何官方合作关系。
-- 歌单信息通过用户主动分享的链接获取，本应用不存储或再分发任何音乐内容。
-- 匹配结果取决于 Apple Music 曲库的可用性。
-
-- TransferToAppleMusic is an independently developed tool and has no official affiliation with NetEase Cloud Music or Apple Music.
-- Playlist information is obtained through links actively shared by users. The App does not store or redistribute any music content.
-- Matching results depend on the availability of songs in the Apple Music catalog.
+本应用仅转移歌曲元数据，不下载音频，与上述平台无官方合作关系。
+This independent app transfers song metadata without downloading audio and is not affiliated with the listed platforms.
