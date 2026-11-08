@@ -6,8 +6,8 @@ Multi-platform and file import instructions apply to version 1.1 or later. Avail
 支持 iOS 17 或更新版本，需要有效的 Apple Music 订阅。
 Requires iOS 17 or later and an active Apple Music subscription.
 
-复制来源平台的公开歌单分享链接，粘贴到首页并导入，审核匹配结果后再转移。
-Paste a public playlist share link, review the matches, then import.
+复制来源平台的公开歌单分享链接，在首页粘贴后点“读取歌单”；点击歌单查看匹配，或勾选多个歌单后统一匹配。使用“待确认”筛选检查未匹配歌曲，选择版本或编辑搜索词，确认后点“转移到 Apple Music”。1.1 版本中的对应操作为“导入歌单”。
+Paste a public playlist share link and choose Read playlist. Open a playlist to review its matches, or select several to match together. Use To review to find songs needing attention, choose a version or edit the search terms, then choose Transfer. In version 1.1, the corresponding first action is Import Playlist.
 
 | 来源 / Source | 直接链接 / Direct links |
 |---|---|
@@ -31,6 +31,9 @@ title,artist,album
 
 免费额度为 30 首成功转移。100 首、500 首额度包可重复购买，Pro 为永久无限制。重复交易通知不会重复增加额度；已拥有的 Pro 无需重新购买。消耗型额度保存在当前设备，不能通过“恢复购买”恢复已消耗交易。
 Includes 30 free successful transfers. Credit packs add 100 or 500 transfers; Pro is a one-time unlimited purchase. Duplicate transaction notifications do not duplicate credits. Existing Pro owners do not need to buy again. Consumable balances are stored on the current device and are not restored by Restore Purchases after transactions have been consumed.
+
+1.2 新界面：顶部额度入口显示剩余歌曲数或 Pro；文件导入在首页“从文件导入”或歌单页“文件”。转移时可点“暂停转移”，下次打开应用继续；只在核对成功后使用额度。
+In version 1.2, credits or Pro appear in the top bar. Use Import from file on Home or File in the playlist list. Pause a transfer and resume it when reopening the app. Credits are used only after songs are successfully added.
 
 反馈 / Feedback: [GitHub Issues](https://github.com/LINZHI97/TransferToAppleMusic-Support/issues)
 
